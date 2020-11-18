@@ -1,12 +1,16 @@
 <template>
     <div>
-<h1> {{name}} component</h1>
+<PortfolioSection></PortfolioSection>
     </div>
 </template>
 
 <script>
+import PortfolioSection from '../PortfolioSection'
     export default {
-        name:'Portfolio'
+        name:'Portfolio',
+        components:{
+            PortfolioSection
+        }
     }
 </script>
 

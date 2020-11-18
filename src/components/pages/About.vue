@@ -1,12 +1,22 @@
 <template>
     <div>
-<h1> {{name}} component</h1>
+<TopAbout></TopAbout>
+<AboutMiddle></AboutMiddle>
+<TeamAbout></TeamAbout>
     </div>
 </template>
 
 <script>
+import TopAbout from '../TopAbout.vue'
+import AboutMiddle from '../AboutMiddle.vue'
+import TeamAbout from '../TeamAbout.vue'
     export default {
-        name: 'About'
+        name: 'About',
+        components: {
+            TopAbout,
+            AboutMiddle,
+            TeamAbout
+        }
     }
 </script>
 
