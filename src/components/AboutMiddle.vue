@@ -1,12 +1,12 @@
 <template>
     <div>
-<h1> {{name}} component</h1>
+<h1>aboutmiddle component</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name:'Home'
+        name: 'AboutMiddle'
     }
 </script>
 

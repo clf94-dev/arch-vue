@@ -1,12 +1,12 @@
 <template>
     <div>
-<h1> {{name}} component</h1>
+<h1> hometeam component</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name:'Home'
+        name: 'HomeTeam'
     }
 </script>
 
