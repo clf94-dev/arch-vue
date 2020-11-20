@@ -9,13 +9,19 @@
       </div>
       <ul class="nav-menu">
         <li class="nav-item">
-          <router-link to="/portfolio" class="nav-links">Portfolio</router-link>
+          <router-link to="/portfolio" :active-link="active" class="nav-links"
+            >Portfolio</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/about" class="nav-links">About Us</router-link>
+          <router-link to="/about" :active-link="active" class="nav-links"
+            >About Us</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/contact" class="nav-links">Contact </router-link>
+          <router-link to="/contact" :active-link="active" class="nav-links"
+            >Contact
+          </router-link>
         </li>
       </ul>
     </div>
@@ -38,4 +44,130 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.navbar {
+  height: 120px;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.navbar .navbar-cont {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  max-width: 1600px;
+}
+
+@media screen and (max-width: 756px) {
+  .navbar .navbar-cont {
+    height: 80px;
+  }
+}
+
+.navbar .navbar-cont .navbar-logo {
+  text-align: start;
+  margin-left: 150px;
+  margin-top: 30px;
+  cursor: pointer;
+  align-items: center;
+}
+
+@media screen and (max-width: 756px) {
+  .navbar .navbar-cont .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 0);
+  }
+}
+
+.navbar .navbar-cont .navbar-logo img {
+  align-self: start !important;
+  height: 50%;
+}
+
+.navbar .navbar-cont .menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 756px) {
+  .navbar .navbar-cont .menu-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+.navbar .navbar-cont .menu-icon .fa-bars,
+.navbar .navbar-cont .menu-icon .fa-times {
+  color: #000000;
+}
+
+.navbar .navbar-cont .nav-menu {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 60px;
+  list-style: none;
+  text-align: center;
+  justify-content: start;
+  margin-left: 70px;
+  width: 70vw;
+  align-items: center;
+}
+
+@media screen and (max-width: 756px) {
+  .navbar .navbar-cont .nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    width: 80%;
+    height: 40vh;
+    position: absolute;
+    top: 90px;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .navbar-cont .nav-menu.active {
+    background-color: #c8ccd8;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbar .navbar-cont .nav-menu.active .nav-links:hover {
+    color: #000000 !important;
+  }
+}
+
+.navbar .navbar-cont .nav-menu .nav-links {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  color: #707070;
+}
+.navbar .navbar-cont .nav-menu .nav-links.router-link-active {
+  color: black !important;
+}
+.navbar .navbar-cont .nav-menu .nav-links:hover {
+  transition: all 0.2s ease-out;
+}
+
+.navbar .navbar-cont .nav-menu .nav-links-mobile {
+  display: none;
+}
+
+.navbar .navbar-cont .nav-menu .nav-links .nav-item:hover {
+  cursor: pointer;
+  color: #000000 !important;
+}
+</style>
