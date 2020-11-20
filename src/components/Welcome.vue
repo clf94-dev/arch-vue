@@ -40,4 +40,79 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.welcome-cont {
+  padding: 5% 7%;
+}
+
+.welcome-cont .text-col {
+  text-align: start;
+}
+
+.welcome-cont .text-col h1 {
+  position: absolute;
+  display: block;
+  left: 10vw;
+  font-weight: 500;
+  letter-spacing: -0.8rem;
+  font-size: 180px;
+  z-index: -1 !important;
+  color: #eeeff4;
+}
+
+@media screen and (max-width: 756px) {
+  .welcome-cont .text-col h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .welcome-cont .text-col h1 {
+    padding-top: 2%;
+    font-size: 120px;
+  }
+}
+
+.welcome-cont .text-col h3 {
+  padding: 25% 7% 2% 6%;
+  letter-spacing: -0.3rem;
+  z-index: 2 !important;
+  font-size: 56px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1080px) {
+  .welcome-cont .text-col h3 {
+    padding: 140px 3% 2% 32%;
+  }
+}
+
+.welcome-cont .text-col p {
+  padding: 1% 7% 2% 6%;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 1080px) {
+  .welcome-cont .text-col p {
+    padding: 1% 2% 2% 32%;
+  }
+}
+
+.welcome-cont .img-col {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .welcome-cont .img-col {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .welcome-cont .img-col {
+    display: none;
+  }
+}
+</style>
