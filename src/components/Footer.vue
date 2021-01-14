@@ -2,7 +2,7 @@
   <b-container fluid class="footer-cont">
     <b-row>
       <b-col class="logo-cont" xs="12" sm="12" md="2" lg="2">
-        <img :src="archLogoW" alt="Arch" />
+        <img :src="archLogoW" alt="Arch" @click="goToHome()" />
       </b-col>
       <b-col class="links-col" xs="12" sm="12" md="2" lg="2">
         <a @click="goToPortfolio()">Portfolio</a>
@@ -11,7 +11,7 @@
         <a @click="goToAbout()">About</a>
       </b-col>
       <b-col class="links-col" xs="12" sm="12" md="2" lg="2">
-        <a @click="goToContact()">Portfolio</a>
+        <a @click="goToContact()">Contact</a>
       </b-col>
       <b-col class="btn-col" xs="12" sm="12" md="2" lg="2">
         <button @click="goToPortfolio()">See Our Portfolio</button>
@@ -24,16 +24,11 @@
 <script>
 export default {
   name: "Footer",
-  data() {
-    return {
-      archLogoW: require("@/assets/images/logo copy.svg"),
-    };
-  },
   methods: {
     goToHome() {
       this.$router.push("/home");
     },
-    goToPorfolio() {
+    goToPortfolio() {
       this.$router.push("/portfolio");
     },
     goToAbout() {
@@ -42,6 +37,11 @@ export default {
     goToContact() {
       this.$router.push("/contact");
     },
+  },
+  data() {
+    return {
+      archLogoW: require("@/assets/images/logo copy.svg"),
+    };
   },
 };
 </script>
