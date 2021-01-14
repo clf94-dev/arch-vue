@@ -1,6 +1,6 @@
 <template>
   <div class="info-card">
-    <p>{{ info.office }}</p>
+    <p class="title">{{ info.office }}</p>
     <p>{{ info.mail }}</p>
     <p>{{ info.address }}</p>
     <p>{{ info.phone }}</p>
@@ -14,4 +14,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.info-card {
+  padding-bottom: 25px;
+}
+
+.info-card p {
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.info-card p.title {
+  font-weight: 600;
+}
+</style>
