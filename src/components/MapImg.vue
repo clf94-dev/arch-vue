@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="map-img-cont">
     <img :src="mapD" :srcset="`${mapD} 1000w,${mapT} 780w, ${mapM} 480w`" alt="Map" />
   </div>
 </template>
@@ -17,4 +17,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.map-img-cont {
+  padding: 2% 7% 5% 10%;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+</style>
