@@ -116,6 +116,11 @@ export default {
   margin-left: 50%;
 }
 
+@media screen and (max-width: 600px) {
+  .footer-cont .btn-col button {
+    margin-left: 0%;
+  }
+}
 .footer-cont .btn-col button img {
   padding-top: 5px;
   padding-left: 20px;
