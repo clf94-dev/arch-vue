@@ -125,4 +125,119 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.intro-cont {
+  padding: 3% 7% 5% 10%;
+}
+
+.intro-cont .text-col {
+  width: 100%;
+  position: absolute;
+  top: 28vw;
+  left: 20%;
+  padding-right: 70% !important;
+  font-weight: normal;
+  color: #eeeff4;
+  text-align: start;
+}
+
+@media screen and (max-width: 757px) {
+  .intro-cont .text-col {
+    position: absolute;
+    top: 10%;
+  }
+}
+
+.intro-cont .text-col h1 {
+  font-size: 70px;
+}
+
+@media screen and (max-width: 756px) {
+  .intro-cont .text-col h1 {
+    font-size: 40px;
+    padding-top: 60% !important;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .intro-cont .text-col h1 {
+    padding-top: 65% !important;
+  }
+}
+
+.intro-cont .text-col p {
+  font-size: 15px;
+  padding-right: 20% !important;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 757px) {
+  .intro-cont .text-col p {
+    font-size: 14px;
+    padding-right: 5% !important;
+  }
+}
+
+.intro-cont .text-col button {
+  width: 250px;
+  height: 60px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.intro-cont .text-col button img {
+  padding-top: 5px;
+  padding-left: 20px;
+  height: 20px;
+}
+
+.intro-cont .text-col button:hover {
+  background-color: #707070;
+  color: white;
+  border-color: #707070;
+}
+
+.intro-cont .img-col {
+  width: 100%;
+}
+
+.intro-cont .img-col img {
+  width: 100%;
+}
+
+.btn-row {
+  position: absolute;
+  top: 61.7vw;
+  left: 160px;
+}
+
+@media screen and (max-width: 756px) {
+  .btn-row {
+    top: 85% !important;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .btn-row {
+    top: 120%;
+  }
+}
+
+.btn-row .btn {
+  background-color: white;
+  border: 1px solid #707070;
+  border-radius: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.btn-row .btn h3 {
+  font-size: 12px;
+}
+
+.btn-row .btn:hover {
+  background-color: #c8ccd8 !important;
+}
+</style>
