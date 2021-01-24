@@ -128,38 +128,40 @@ export default {
 <style scoped>
 .intro-cont {
   padding: 3% 7% 5% 10%;
+  text-align:start;
 }
 
 .intro-cont .text-col {
   width: 100%;
   position: absolute;
-  top: 28vw;
+  top: 10vw;
   left: 20%;
-  padding-right: 70% !important;
+  padding-right: 70%  ;
   font-weight: normal;
-  color: #eeeff4;
-  text-align: start;
+  color: #EEEFF4;
 }
 
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 999px) {
   .intro-cont .text-col {
-    position: absolute;
-    top: 10%;
+    top: 20%;
+     padding-right: 40% ;
   }
 }
 
 .intro-cont .text-col h1 {
   font-size: 70px;
+  width: 100%;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 999px) {
   .intro-cont .text-col h1 {
-    font-size: 40px;
-    padding-top: 60% !important;
+    font-size: 50px;
+    padding-top: 30% ;
+    margin-bottom: 3%;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1080px) {
   .intro-cont .text-col h1 {
     padding-top: 65% !important;
   }
@@ -167,14 +169,15 @@ export default {
 
 .intro-cont .text-col p {
   font-size: 15px;
-  padding-right: 20% !important;
+  padding-right: 20%;
+  width: 100%;
   padding-bottom: 40px;
 }
 
 @media screen and (max-width: 757px) {
   .intro-cont .text-col p {
     font-size: 14px;
-    padding-right: 5% !important;
+    padding-right: 5%;
   }
 }
 
@@ -184,6 +187,8 @@ export default {
   background-color: #000000;
   color: white;
   cursor: pointer;
+  margin-top: 4%;
+  align-items: center !important;
   border: 1px solid black;
 }
 
@@ -208,28 +213,41 @@ export default {
 }
 
 .btn-row {
+  z-index: 1;
   position: absolute;
-  top: 61.7vw;
-  left: 160px;
+  top: 60.25vw;
+  left: 100px;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 999px) {
   .btn-row {
-    top: 85% !important;
+    position: absolute;
+    top: 80% !important;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 999px) {
   .btn-row {
-    top: 120%;
+    position: absolute;
+    top: 123% !important;
+    left: 130px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .btn-row {
+    top: 90% !important;
+    left: 130px;
+  }
+}
+
+
 
 .btn-row .btn {
   background-color: white;
   border: 1px solid #707070;
-  border-radius: 0;
   padding: 20px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -238,6 +256,7 @@ export default {
 }
 
 .btn-row .btn:hover {
-  background-color: #c8ccd8 !important;
+  background-color: #C8CCD8 !important;
 }
+
 </style>
