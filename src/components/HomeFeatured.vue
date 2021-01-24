@@ -20,7 +20,7 @@
       >
         <img
           :src="data.srcD"
-          :srcset="`${data.srcD} 1000w, ${data.srcT} 900w, ${data.srcM} 480w`"
+          :srcset="`${data.srcD} 1000w, ${data.srcT} 999w, ${data.srcM} 480w`"
           :alt="data.imgAlt"
         />
         <h1>{{ data.index }}</h1>
@@ -86,8 +86,13 @@ export default {
 
 <style scoped>
 .featured-cont {
-  padding: 5% 7%;
+
+  padding:5% 7%;
 }
+@media screen and (max-width: 750px) {
+  .featured-cont {
+   margin-top: 25%;}
+   }
 
 .featured-cont .feat-head-row {
   padding: 2% 0;
@@ -232,7 +237,8 @@ export default {
 @media screen and (max-width: 1080px) {
   .featured-cont .feat-proj-row .project-card-cont h1 {
     position: absolute  !important;
-    left: 70%;
+    top: 20%;
+    left: 65%;
     margin-top: -32%;
     font-size: 150px;
   }
@@ -269,8 +275,8 @@ export default {
 @media screen and (max-width: 1080px) {
   .featured-cont .feat-proj-row .project-card-cont .project-card-text {
     position: absolute;
-    margin-top: -10%;
-    left: 12%;
+   top: 70%;
+    left: 6%;
     text-align: start;
   }
 }
@@ -278,8 +284,8 @@ export default {
 @media screen and (max-width: 756px) {
   .featured-cont .feat-proj-row .project-card-cont .project-card-text {
     position: absolute;
-    margin-top: -20%;
-    left: 12%;
+    top: 65%;
+    left: 10%;
   }
 }
 
