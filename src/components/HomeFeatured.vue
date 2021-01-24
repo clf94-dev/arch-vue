@@ -25,14 +25,14 @@
         />
         <h1>{{ data.index }}</h1>
         <div class="project-card-text">
-          <h3 :style="{ color: data.index === 0 ? 'black' : '#EEEFF4' }">
+          <h3 :style="{ color: data.index === 1 ? 'black' : '#EEEFF4' }">
             {{ data.title }}
           </h3>
           <button
             @click="goToPortfolio()"
             :style="{
-              color: data.index === 0 ? 'black' : '#EEEFF4',
-              borderColor: data.index === 0 ? 'black' : '#EEEFF4',
+              color: data.index === 1 ? 'black' : '#EEEFF4',
+              borderColor: data.index === 1 ? 'black' : '#EEEFF4',
             }"
           >
             View All Projects
@@ -231,7 +231,7 @@ export default {
 
 @media screen and (max-width: 1080px) {
   .featured-cont .feat-proj-row .project-card-cont h1 {
-    position: absolute;
+    position: absolute  !important;
     left: 70%;
     margin-top: -32%;
     font-size: 150px;
@@ -250,8 +250,9 @@ export default {
 @media screen and (min-width: 1080px) {
   .featured-cont .feat-proj-row .project-card-cont h1 {
     padding-left: 20%;
-    position: relative;
-    top: -65%;
+    position: absolute;
+    top: 5%;
+    left: 40%;
     font-size: 200px;
   }
 }
@@ -259,7 +260,7 @@ export default {
 @media screen and (min-width: 1080px) {
   .featured-cont .feat-proj-row .project-card-cont .project-card-text {
     position: relative;
-    top: -40%;
+    top: -15%;
     padding-left: 30px !important;
     text-align: start;
   }
