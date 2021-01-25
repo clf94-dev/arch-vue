@@ -2,7 +2,7 @@
   <b-container fluid class="top-section-cont">
     <b-row>
       <b-col class="img-col" xs="12" sm="12" md="6" lg="6">
-        <img :src="topContactD" alt="About"
+        <img :src="topContactD" :srcset="`${topContactD} 1000w, ${topContactT} 900w, ${topContactM} 600w`" alt="About"
       /></b-col>
       <b-col class="text-col" xs="12" sm="12" md="6" lg="6">
         <h1>Contact</h1>
@@ -23,6 +23,8 @@ export default {
   data() {
     return {
       topContactD: require("@/assets/images/contact/desktop/image-hero.jpg"),
+    topContactT: require("@/assets/images/contact/tablet/image-hero.jpg"),
+    topContactM: require("@/assets/images/contact/mobile/image-hero.jpg"),
     };
   },
 };
