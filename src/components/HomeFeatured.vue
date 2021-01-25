@@ -316,7 +316,7 @@ export default {
   font-size: 18px;
   font-weight: 300;
   color: #eeeff4;
-  padding-right: 60%;
+  padding-right: 40%;
   padding-bottom: 10px;
 }
 
