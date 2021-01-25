@@ -140,7 +140,7 @@ background-color: white ;
     flex-direction: column;
     padding-top: 7%;
     width: 80%;
-    height: 31vh;
+    height: 39vh;
     position: absolute;
     top: 90px;
     left: 100%;

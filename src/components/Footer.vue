@@ -2,19 +2,19 @@
   <b-container fluid class="footer-cont">
     <b-row>
       <b-col class="logo-cont" xs="12" sm="12" md="2" lg="2">
-        <img :src="archLogoW" alt="Arch" @click="goToHome()" />
+        <img :src="archLogoW" alt="Arch" @click=" scrollToTop(), goToHome()" />
       </b-col>
       <b-col class="links-col" xs="12" sm="12" md="2" lg="2">
-        <a @click="goToPortfolio()">Portfolio</a>
+        <a @click=" scrollToTop(),goToPortfolio()">Portfolio</a>
       </b-col>
       <b-col class="links-col" xs="12" sm="12" md="2" lg="2">
-        <a @click="goToAbout()">About</a>
+        <a @click=" scrollToTop(), goToAbout()">About</a>
       </b-col>
       <b-col class="links-col" xs="12" sm="12" md="2" lg="2">
-        <a @click="goToContact()">Contact</a>
+        <a @click=" scrollToTop(), goToContact()">Contact</a>
       </b-col>
       <b-col class="btn-col" xs="12" sm="12" md="2" lg="2">
-        <button @click="goToPortfolio()">See Our Portfolio</button>
+        <button @click=" scrollToTop(), goToPortfolio()">See Our Portfolio</button>
       </b-col>
       <b-col xs="12" sm="12" md="2" lg="2"> </b-col>
     </b-row>
@@ -25,6 +25,9 @@
 export default {
   name: "Footer",
   methods: {
+        scrollToTop() {
+                window.scrollTo(0,0);
+           },
     goToHome() {
       this.$router.push("/home");
     },
@@ -36,7 +39,9 @@ export default {
     },
     goToContact() {
       this.$router.push("/contact");
-    },
+    }
+       
+        
   },
   data() {
     return {

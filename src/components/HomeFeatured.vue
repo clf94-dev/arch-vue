@@ -5,7 +5,7 @@
         <h3>Featured</h3>
       </b-col>
       <b-col class="button-col" xs="12" sm="12" md="6" lg="6">
-        <button @click="goToPortfolio()">See All</button>
+        <button @click="scrollToTop(), goToPortfolio()">See All</button>
       </b-col>
     </b-row>
     <b-row class="feat-proj-row">
@@ -29,7 +29,7 @@
             {{ data.title }}
           </h3>
           <button
-            @click="goToPortfolio()"
+            @click="scrollToTop(), goToPortfolio()"
             :style="{
               color: data.index === 1 ? 'black' : '#EEEFF4',
               borderColor: data.index === 1 ? 'black' : '#EEEFF4',
@@ -77,6 +77,9 @@ export default {
     };
   },
   methods: {
+    scrollToTop() {
+                window.scrollTo(0,0);
+           },
     goToPortfolio() {
       this.$router.push("/portfolio");
     },

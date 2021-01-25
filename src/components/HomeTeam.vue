@@ -10,7 +10,7 @@
         />
         <div class="team-text">
           <h3>Small team, big ideas</h3>
-          <button @click="goToAbout()">About Us <img :src="arrow" alt="arrow" /></button>
+          <button @click="scrollToTop(), goToAbout()">About Us <img :src="arrow" alt="arrow" /></button>
         </div> </b-col></b-row
   ></b-container>
 </template>
@@ -27,6 +27,9 @@ export default {
     };
   },
   methods: {
+    scrollToTop() {
+                window.scrollTo(0,0);
+           },
     goToAbout() {
       this.$router.push("/about");
     },

@@ -11,7 +11,7 @@
       <b-col class="text-col" xs="12" sm="12" md="12" lg="12">
         <h1>{{ introdata[page].title }}</h1>
         <p>{{ introdata[page].text }}</p>
-        <button @click="goToPortfolio()">See Our Portfolio</button>
+        <button @click=" scrollToTop(), goToPortfolio()">See Our Portfolio</button>
       </b-col>
     </b-row>
     <b-row class="btn-row">
@@ -106,6 +106,9 @@ export default {
     };
   },
   methods: {
+    scrollToTop() {
+                window.scrollTo(0,0);
+           },
     goToPortfolio() {
       this.$router.push("/portfolio");
     },
