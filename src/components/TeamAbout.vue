@@ -4,7 +4,7 @@
       <b-col xs="12" sm="12" md="12" lg="6" class="title-col">
         <h3>The Leaders</h3>
       </b-col>
-      <b-col xs="12" sm="12" md="6" lg="6" class="members-col">
+      <b-col xs="12" sm="12" md="12" lg="6" class="members-col">
         <b-row class="members-row">
           <b-col
             xs="12"
@@ -91,6 +91,7 @@ export default {
   letter-spacing: -0.2rem;
   padding-bottom: 10px;
   text-align: start;
+  margin-bottom: 30px;
 }
 
 .team-cont .members-col {
@@ -123,7 +124,7 @@ export default {
   }
 }
 .team-cont .members-col .member-card .card-col img {
-  width: 350px;
+  width: 100%;
 }
 
 .team-cont .members-col .member-card .card-col h3 {
