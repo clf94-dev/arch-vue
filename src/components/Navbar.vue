@@ -4,21 +4,24 @@
       <div class="navbar-logo">
         <img :src="logo" alt="PhotoSnap" @click="goToHome()" />
       </div>
-      <div class="menu-icon">
-        <i class="fas fa-bars"></i>
+      <div class="menu-icon" >
+          <button class="nav-btn" @click="handleClick()">
+          <span key="bars" v-if="!click"> <i class="fas fa-bars"></i></span>
+          <span key="cross" v-else><i class="fas fa-times"></i></span>
+        </button>
       </div>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <router-link to="/portfolio" :active-link="active" class="nav-links"
+      <ul :class="click ? 'nav-menu active' : 'nav-menu'">
+        <li class="nav-item"  @click="closeMobile()">
+          <router-link to="/portfolio" :active-link="active" class="nav-links" 
             >Portfolio</router-link
           >
         </li>
-        <li class="nav-item">
-          <router-link to="/about" :active-link="active" class="nav-links"
+        <li class="nav-item"  @click="closeMobile()">
+          <router-link to="/about" :active-link="active" class="nav-links" 
             >About Us</router-link
           >
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  @click="closeMobile()">
           <router-link to="/contact" :active-link="active" class="nav-links"
             >Contact
           </router-link>
@@ -32,6 +35,12 @@
 export default {
   name: "Navbar",
   methods: {
+        closeMobile() {
+      this.click = false;
+    },
+    handleClick() {
+      this.click = !this.click;
+    },
     goToHome() {
       this.$router.push("/home");
     },
@@ -39,6 +48,7 @@ export default {
   data() {
     return {
       logo: require("@/assets/images/logo.svg"),
+      click: false,
     };
   },
 };
@@ -60,6 +70,10 @@ export default {
   max-width: 1600px;
 }
 
+.menu-icon .nav-btn{
+  border: none;
+background-color: white ;
+}
 @media screen and (max-width: 756px) {
   .navbar .navbar-cont {
     height: 80px;
@@ -126,7 +140,7 @@ export default {
     flex-direction: column;
     padding-top: 7%;
     width: 80%;
-    height: 40vh;
+    height: 31vh;
     position: absolute;
     top: 90px;
     left: 100%;
@@ -155,6 +169,14 @@ export default {
   height: 100%;
   color: #707070;
 }
+@media screen and (max-width: 756px)
+{
+  .navbar .navbar-cont .nav-menu .nav-links {
+    padding: 0.5rem 3.5rem;
+position: relative;
+right: 20px;
+  }
+}
 .navbar .navbar-cont .nav-menu .nav-links.router-link-active {
   color: black !important;
 }
@@ -169,5 +191,14 @@ export default {
 .navbar .navbar-cont .nav-menu .nav-links .nav-item:hover {
   cursor: pointer;
   color: #000000 !important;
+}
+@media screen and (max-width: 756px)
+{
+.navbar .navbar-cont .nav-menu .nav-links .nav-item:hover {
+  cursor: pointer;
+  color: #000000 !important;
+  border: 1px  solid #000000 !important;
+
+}
 }
 </style>
