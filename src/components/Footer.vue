@@ -16,7 +16,7 @@
       <b-col class="btn-col" xs="12" sm="12" md="2" lg="2">
         <button @click=" scrollToTop(), goToPortfolio()">See Our Portfolio</button>
       </b-col>
-      <b-col xs="12" sm="12" md="2" lg="2"> </b-col>
+    
     </b-row>
   </b-container>
 </template>
@@ -119,6 +119,7 @@ export default {
   align-items: center !important;
   border: 1px solid black;
   margin-left: 50%;
+  z-index: 100  !important;
 }
 
 @media screen and (max-width: 600px) {
